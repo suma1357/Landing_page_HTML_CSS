@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090a18;
+    color: #f6f5ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 7%;
+
+    background: rgba(9,10,24,.9);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #242541;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logo span,
+h1 span,
+h2 span {
+    color: #9d8cff;
+}
+
+header nav {
+    display: flex;
+    gap: 28px;
+}
+
+header nav a {
+    color: #a9a7bd;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    background: #9d8cff;
+    color: #090a18;
+
+    font-weight: 700;
+}
+
+.hero {
+    min-height: 90vh;
+
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #9d8cff;
+    letter-spacing: 3px;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: #aaa8bd;
+    margin: 30px 0 35px;
+    max-width: 550px;
+}
+
+.hero-card {
+    position: relative;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.match-card {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+
+    padding: 25px;
+
+    width: 190px;
+
+    border-radius: 20px;
+
+    background: rgba(15,15,35,.9);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid #38355e;
+}
+
+.match-card span {
+    display: block;
+    color: #9d8cff;
+    font-size: .7rem;
+}
+
+.match-card strong {
+    display: block;
+    font-size: 2.5rem;
+}
+
+.match-card p {
+    color: #aaa8bd;
+    font-size: .8rem;
+}
+
+.features,
+.process,
+.scholarships {
+    padding: 120px 7%;
+}
+
+.heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.grid article {
+    padding: 35px;
+    min-height: 250px;
+
+    border: 1px solid #272642;
+    border-radius: 25px;
+
+    background: #101127;
+}
+
+.grid article span,
+.steps strong {
+    color: #9d8cff;
+}
+
+.grid h3 {
+    margin: 45px 0 15px;
+}
+
+.grid p,
+.steps p,
+.scholarships {
+    color: #aaa8bd;
+}
+
+.process {
+    background: #0d0e22;
+}
+
+.process > h2 {
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.steps article {
+    border-top: 1px solid #3a375c;
+    padding-top: 25px;
+}
+
+.steps strong {
+    font-size: .9rem;
+}
+
+.steps h3 {
+    margin: 30px 0 10px;
+    color: white;
+}
+
+.scholarships {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.dashboard {
+    display: grid;
+    gap: 15px;
+}
+
+.dashboard div {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #292746;
+    border-radius: 18px;
+
+    background: #101127;
+}
+
+.dashboard span {
+    color: #85829c;
+    font-size: .75rem;
+}
+
+.dashboard strong {
+    color: white;
+    margin: 8px 0;
+}
+
+.dashboard small {
+    color: #9d8cff;
+}
+
+.cta {
+    padding: 140px 7%;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #211d48,
+            transparent 60%
+        );
+}
+
+.cta p {
+    color: #aaa8bd;
+    margin: 20px 0 35px;
+}
+
+footer {
+    padding: 40px 7%;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #272642;
+
+    color: #77758c;
+}
+
+footer nav {
+    display: flex;
+    gap: 20px;
+}
+
+@media(max-width:800px) {
+
+    header nav {
+        display: none;
+    }
+
+    .hero,
+    .scholarships {
+        grid-template-columns: 1fr;
+    }
+
+    .grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card img {
+        height: 350px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
